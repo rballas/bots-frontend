@@ -2,3 +2,20 @@
 .has-negative-margin-top {
     margin-top: -52px;
 }
+
+.has-basic-hover-effect:hover {
+    cursor: pointer;
+    opacity: .9;
+    -moz-box-shadow: 0px 1px 5px 0px #676767;
+    -webkit-box-shadow: 0px 1px 5px 0px #676767;
+    box-shadow: 0px 1px 5px 0px #676767;
+}
+
+.has-slanted-edge {
+    clip-path: polygon(
+        0 0, /* left top */
+        100% 0, /* left bottom */
+        100% 100%, /* right bottom */
+        0 calc(100% - 4vw) /* right top */ 
+    );
+}

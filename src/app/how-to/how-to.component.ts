@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-howto',
-  templateUrl: './howto.component.html',
-  styleUrls: ['./howto.component.css']
+  selector: 'app-how-to',
+  templateUrl: './how-to.component.html',
+  styleUrls: ['./how-to.component.css']
 })
-
-export class HowtoComponent implements OnInit {
+export class HowToComponent implements OnInit {
   toggleStep(num) {
     var howto = document.getElementById("howto");
     var lists = howto.getElementsByTagName("ul");

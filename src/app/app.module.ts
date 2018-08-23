@@ -4,10 +4,12 @@ import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SplashComponent } from './splash/splash.component';
-import { HowtoComponent } from './howto/howto.component';
 import { BenefitsComponent } from './benefits/benefits.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { HowToComponent } from './how-to/how-to.component';
+import { BuildsDomainsComponent } from './builds-domains/builds-domains.component';
+import { BuildsOptionsComponent } from './builds-options/builds-options.component';
 
 const routes: Routes = [
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
+    path: 'builds/domains',
+    component: BuildsDomainsComponent
+  },
+  {
+    path: 'builds/options',
+    component: BuildsOptionsComponent
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -39,10 +49,12 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     SplashComponent,
-    HowtoComponent,
     BenefitsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HowToComponent,
+    BuildsDomainsComponent,
+    BuildsOptionsComponent
   ],
   imports: [
     BrowserModule,
