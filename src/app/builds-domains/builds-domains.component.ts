@@ -9,6 +9,7 @@ import { BuildService } from './../build.service';
 })
 
 export class BuildsDomainsComponent implements OnInit {
+  public domain: string;
 
   constructor(public buildService: BuildService, private router: Router) { }
 
@@ -17,6 +18,10 @@ export class BuildsDomainsComponent implements OnInit {
 
   selectDomain(domain) {
     this.buildService.domain = domain;
+    this.domain = domain;
+  }
+
+  nextOptions() {
     this.router.navigate(['builds/options']);
   }
 

@@ -51,10 +51,24 @@
               </span>
             </div>
         </div>
+        <div class="column">
+            <div class="control">
+              <a class="button is-link is-pulled-right" 
+              [attr.disabled]="!domain ? '' : null"
+              (click)="nextOptions()">
+                <span>Next</span>
+                <span class="icon is-small">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </a>
+            </div>
+        </div>
       </div>
       <div class="columns">
         <div class="column">
-          <div class="box has-basic-hover-effect" (click)="selectDomain('Reddit')">
+        <div class="box has-basic-hover-effect" 
+            (click)="selectDomain('Reddit')" 
+            [ngStyle]="{ 'border' : (domain == 'Reddit') ? '1px solid #2F80ED' : '#ffffff' }">
             <article class="media">
               <div class="media-content">
                 <div class="content has-text-centered">
@@ -62,7 +76,7 @@
                     <img src="assets/images/home/reddit_icon.svg">
                     <br>
                     <br>
-                    Reddit                  
+                    Reddit              
                   </p>
                 </div>
               </div>

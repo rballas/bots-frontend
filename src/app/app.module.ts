@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HowToComponent } from './how-to/how-to.component';
 import { BuildsDomainsComponent } from './builds-domains/builds-domains.component';
 import { BuildsOptionsComponent } from './builds-options/builds-options.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -58,7 +59,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

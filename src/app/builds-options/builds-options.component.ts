@@ -10,6 +10,7 @@ import { BuildService } from './../build.service';
 
 export class BuildsOptionsComponent implements OnInit {
   public domain: string;
+  public options: Array<String>;
 
   constructor(public buildService: BuildService, private router: Router) {
     if (this.buildService.domain) {
@@ -17,6 +18,10 @@ export class BuildsOptionsComponent implements OnInit {
     } else {
       this.router.navigate(['builds/domains']);
     }
+  }
+
+  addOption() {
+    console.log("Adding option");
   }
 
   ngOnInit() {
